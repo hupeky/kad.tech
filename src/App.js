@@ -5,7 +5,6 @@ import 'typeface-roboto'
 import Layout from './hoc/Layout/Layout'
 
 import Home from './pages/Home/Home'
-import CV from './pages/CV/CV'
 
 import Auxillery from './hoc/Auxillery/Auxillery'
 

@@ -40,7 +40,7 @@ const styles = {
     pageBlockIcon: {
         fontSize: '200px',
         color: 'white',
-        opacity: '0.1',
+        opacity: '0.2',
         boxSizing: 'border-box',
         margin: '15px 0'
     }
@@ -95,7 +95,9 @@ const home = ( props ) => {
 
             </MuiThemeProvider>
 
-            <PageBlock icon={<SkillsIcon />} label={'Skills'} backgroundColor={theme.palette.grey.main}>
+            <MuiThemeProvider theme={darkTheme}>
+
+            <PageBlock icon={<SkillsIcon />} label={'Skills'} backgroundColor={"rgb(50,50,50)"}>
 
                 <SlideIn partial={true}>
                     <Display3>Skills</Display3>
@@ -105,7 +107,7 @@ const home = ( props ) => {
                     <Grid item xs={1} md={2} />
                     <Grid item xs={10} md={8}>
                         <ScaleIn offset={50}>
-                            <SkillsIcon style={{color: 'black', padding: '15px'}} className={classes.pageBlockIcon} />
+                            <SkillsIcon style={{color: 'white', padding: '15px'}} className={classes.pageBlockIcon} />
                         </ScaleIn>
 
                         <SlideIn partial={true}>
@@ -135,8 +137,9 @@ const home = ( props ) => {
                     </Grid>
                 </Grid>
             </PageBlock>
+    
 
-            <PageBlock icon={<ExamplesIcon />} label={'Examples'} backgroundColor={'white'}>
+            <PageBlock icon={<ExamplesIcon />} label={'Examples'} backgroundColor={'black'}>
                 <Grid container spacing={8}>
                     <Grid item xs={1} md={2} />
                     <Grid item xs={10} md={8}>
@@ -223,6 +226,7 @@ const home = ( props ) => {
                 <ExampleImageHolder company='pret' />
 
             </PageBlock>
+            </MuiThemeProvider>
 
             <PageBlock icon={<RecommendationsIcon />} label={'Recommendations'} backgroundColor={theme.palette.grey.main}>
 

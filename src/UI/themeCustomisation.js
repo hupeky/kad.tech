@@ -8,10 +8,10 @@ let themeCustomisation = {
     },
     palette: {
         primary: {
-            main: '#00A2A2'
+            main: '#e1675a'
         },
         secondary: {
-            main: '#D9004A'
+            main: '#e1675a'
         },
         grey: {
             main: '#E9E9E9',

@@ -44,8 +44,8 @@ const calcualteDistanceLookup = ( newX, newZ ) => {
 }
 
 const dim = {
-    x:32,
-    z:32
+    x:57,
+    z:43
 }
 
 const initialState = {
@@ -57,7 +57,7 @@ const initialState = {
     },
     waveType: 'pixel',
     waveShape: 'wave',
-    waveHeight: 2,
+    waveHeight: 4,
     waveSpeed: 4,
     bounceSpeed: 2,
     animCoords: null,
@@ -68,7 +68,7 @@ const initialState = {
     colours: colours,
     colourIndex: 0,
     colourRef: null,
-    cubeHeight: 0.3
+    cubeHeight: 0.6
 }
 
 

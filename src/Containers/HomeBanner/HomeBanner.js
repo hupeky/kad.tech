@@ -34,16 +34,16 @@ const styles = theme => ( {
         width: '100%'
     },
     maxHeightBreaks: {
-        [theme.breakpoints.down( 'xs' )]: {maxHeight: '650px'},
-        [theme.breakpoints.up( 'sm' )]: {maxHeight: '700px'},
-        [theme.breakpoints.up( 'md' )]: {maxHeight: '900px'},
-        [theme.breakpoints.up( 'xl' )]: {maxHeight: '1000px'}
+        [theme.breakpoints.down( 'xs' )]: {maxHeight: '500px'},
+        [theme.breakpoints.up( 'sm' )]: {maxHeight: '550px'},
+        [theme.breakpoints.up( 'md' )]: {maxHeight: '600px'},
+        [theme.breakpoints.up( 'xl' )]: {maxHeight: '700px'}
     },
     heightBreaks: {
-        [theme.breakpoints.down( 'xs' )]: {height: '650px'},
-        [theme.breakpoints.up( 'sm' )]: {height: '700px'},
-        [theme.breakpoints.up( 'md' )]: {height: '900px'},
-        [theme.breakpoints.up( 'xl' )]: {height: '1000px'}
+        [theme.breakpoints.down( 'xs' )]: {height: '500px'},
+        [theme.breakpoints.up( 'sm' )]: {height: '550px'},
+        [theme.breakpoints.up( 'md' )]: {height: '600px'},
+        [theme.breakpoints.up( 'xl' )]: {height: '700px'}
     },
     navIconHide: {
         [theme.breakpoints.up( 'md' )]: {
@@ -93,7 +93,7 @@ class HomeBanner extends Component {
 
     startDemoHandler = () => {
         this.props.enter3DHandler()
-        this.props.startColourAnim( 'animBackdrops' )
+        this.props.startColourAnim( 'logo' )
     }
 
 
@@ -112,7 +112,7 @@ class HomeBanner extends Component {
                 </IconButton> : null}
 
 
-                <Hidden mdUp>
+                <Hidden xsUp>
                     <Drawer
                         variant="temporary"
                         anchor='right'
@@ -157,7 +157,7 @@ class HomeBanner extends Component {
                     </AScene>
                 </div>
 
-                <Hidden smDown implementation="css">
+                <Hidden xsUp implementation="css">
                     <Drawer
                         variant="persistent"
                         anchor='right'
