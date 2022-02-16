@@ -15,8 +15,8 @@ import DemoIcon from '../../assets/icons/demo'
 
 const navBar = ( props ) => {
     return (
-        <div style={{background: "rgb(50,50,50)"}}>
-        <AppBar position="sticky" color="inherit" elevation={10}>
+
+        <AppBar style={{background: "rgb(50,50,50)"}} position="sticky" color="inherit" elevation={10}>
             <Toolbar>
                 <Hidden only={['md', 'lg', 'xl']}>
                     <IconButton onClick={props.toggleDrawer}>
@@ -39,7 +39,7 @@ const navBar = ( props ) => {
                 <SecondaryLinks  align='right' />
             </Toolbar>
         </AppBar>
-        </div>
+  
 
     )
 }

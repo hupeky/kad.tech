@@ -97,7 +97,7 @@ const home = ( props ) => {
 
             <MuiThemeProvider theme={darkTheme}>
 
-            <PageBlock icon={<SkillsIcon />} label={'Skills'} backgroundColor={"rgb(50,50,50)"}>
+            <PageBlock icon={<SkillsIcon />} label={'Skills'} backgroundColor={"rgb(60,60,60)"}>
 
                 <SlideIn partial={true}>
                     <Display3>Skills</Display3>
@@ -139,7 +139,7 @@ const home = ( props ) => {
             </PageBlock>
     
 
-            <PageBlock icon={<ExamplesIcon />} label={'Examples'} backgroundColor={'black'}>
+            <PageBlock icon={<ExamplesIcon />} label={'Examples'} backgroundColor={'rgb(40,40,40)'}>
                 <Grid container spacing={8}>
                     <Grid item xs={1} md={2} />
                     <Grid item xs={10} md={8}>

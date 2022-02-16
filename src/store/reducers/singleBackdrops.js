@@ -9,7 +9,7 @@ singleBackdrops.logo =  [{
     imgSrc: logo,
     rgbaArray: {},
     delay: 0,
-    duration: 1
+    duration: 0.2
 }]
 // singleBackdrops.sonicBG = [{
 //     type: 'single',
