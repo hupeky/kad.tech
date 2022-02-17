@@ -9,6 +9,7 @@ import Drawer from '@material-ui/core/Drawer'
 import Hidden from '@material-ui/core/Hidden'
 import MenuIcon from '@material-ui/icons/Menu'
 import IconButton from '@material-ui/core/IconButton'
+import kadtechLogo from "../../assets/imgs/kadtech-logo.png"
 
 import AScene from '../../stateless/AScene/AScene'
 import {withStyles} from '@material-ui/core/styles'
@@ -139,19 +140,19 @@ class HomeBanner extends Component {
                         >
                             <div className={myClasses.bg} />
                             <div className={[myClasses.contentHolder, classes.maxHeightBreaks].join( " " )}>
-                                <Typography variant={'display3'}>Kye Huelin</Typography>
-                                <Typography style={{opacity: 1}} variant={'headline'}>Senior web software and vis engineer</Typography>
-                                <Typography style={{marginTop: '0',opacity: 1}} variant={'body2'}>React, WebVR, Redux, JS2015+, </Typography>
-                                {/* <SecondaryLinks /> */}
-                                <Typography className={classes.blockGreenText} variant={'body2'}>Contractor, London, available now</Typography>
+                 
+                                <img style={{display: "block", width: "60%", height: "auto" , maxWidth: "350px"}} src={kadtechLogo} height={200} />
+                                {/* <Typography style={{opacity: 1}} variant={'headline'}>3D Web Software Engineering</Typography> */}
 
-                                <Hidden mdUp>
+
+
+                                {/* <Hidden mdUp>
                                     <Button style={{marginTop:'10px',marginBottom:'5px'}} click={this.startDemoHandler} outline='true'  spacer="true" label={'Click to play Pixels'}>
                                         <DemoIcon height={25} />
                                     </Button>
 
                                     <Typography style={{width: '90%', maxWidth: '280px', textAlign: 'center', fontSize: '0.75em'}} variant={'body1'}>(Behind this text is a demo I call 'pixels': It's a homage to the games that inspired me to love tech)</Typography>
-                                </Hidden>
+                                </Hidden> */}
                             </div>
                         </div>
                     </AScene>

@@ -17,10 +17,11 @@ import Spinner from '../../../UI/Spinner/Spinner'
 
 import onScreen from '../../../hoc/OnScreen/OnScreen'
 import myClasses from './ExampleImage.css'
+import { Typography } from '@material-ui/core'
 const styles = theme => ( {
     card: {
         flexDirection: 'column',
-        backgroundColor: 'rgba(220,220,220,0.5)',
+        backgroundColor: 'rgba(0,0,0,0.5)',
         marginBottom: '60px'
         // [theme.breakpoints.down( 'sm' )]: {flexDirection: 'column'}
     },
@@ -86,7 +87,7 @@ class ReferenceItem extends Component {
                     {this.props.body ? (
                         <React.Fragment>
                             <CardActions className={classes.actions} disableActionSpacing>
-                                <span style={{marginLeft: 'auto'}}>more info</span>
+                                <Typography component={"p"} style={{marginLeft: 'auto', height: 0, marginTop: "12px"}}>more info</Typography>
                                 <IconButton
                                     className={[classes.expand, this.state.expanded ? classes.expandOpen : null].join( " " )}
                                     onClick={this.handleExpandClick}

@@ -33,16 +33,16 @@ class ManageChildren extends React.Component {
     componentDidMount () {
         this.tl.set( `#${this.props.name} .stroke`, {drawSVG: "0% 0%"}, 0 )
         this.tl.set( `#${this.props.name} .stroke`, {delay: this.props.startDelay}, 0 )
-            .staggerTo( `#${this.props.name} .stroke`, 1, {drawSVG: "0% 100%"}, 0.3 )
-            .staggerTo( `#${this.props.name} .stroke`, 0.5, {strokeOpacity: 0}, 0.3 )
+            .staggerTo( `#${this.props.name} .stroke`, 1, {drawSVG: "0% 100%"}, 0.4 )
+            .staggerTo( `#${this.props.name} .stroke`, 0.5, {strokeOpacity: 1}, 0.4 )
             .seek( 0 )
             .pause()
 
         let myFIll = document.getElementById( `${this.props.name}` ).getElementsByClassName( 'fill' )
         for ( let i = 0; i < myFIll.length; i++ ) {
-            this.tl.set( myFIll[i].style, {fillOpacity: 0}, 0 )
-            this.tl.to( myFIll[i].style, 0.5, {fillOpacity: 1}, 1.6 + ( this.props.startDelay / 100 ) )
-            this.tl.to( myFIll[i].style, 1.5, {transform:'scale(1)', ease:Elastic.easeOut}, 1.2 + ( 0.1 * i ) )
+            this.tl.set( myFIll[i].style, {fillOpacity: 0}, 2 )
+            this.tl.to( myFIll[i].style, 0.5, {fillOpacity: 1}, 2.6 + ( this.props.startDelay  ) )
+            this.tl.to( myFIll[i].style, 1.5, {transform:'scale(1)', ease:Elastic.easeOut},  2.6 + ( this.props.startDelay  ) )
         }
     }
 

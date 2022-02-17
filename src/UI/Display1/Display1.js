@@ -8,9 +8,9 @@ const styles = theme => ( {
         [theme.breakpoints.up( 'md' )]: {fontSize: '1.7em'},
         [theme.breakpoints.up( 'lg' )]: {fontSize: '1.9em'},
         fontWeight: 500,
-        textAlign:'left',
-        marginBottom:'10px',
-        marginTop:'60px'
+        textAlign:'center',
+        marginBottom:'30px',
+        marginTop:'30px'
     }
 } )
 

@@ -4,7 +4,7 @@ import ManageChildren from '../../../../hoc/ManageChildren/ManageChildren'
 class ReactLogo extends Component {
     render () {
         return (
-            <ManageChildren startDelay={this.props.startDelay} onScreen={this.props.onScreen} name={this.props.id}>
+                <ManageChildren startDelay={this.props.startDelay} onScreen={this.props.onScreen} name={this.props.id}>
                 <path fill="#42ACE2" d="M328,153.1c0-70.8-57.4-128.2-128.2-128.2S71.6,82.3,71.6,153.1c0,56.2,36.2,103.9,86.5,121.2
                     c3.1-2.2,6.6-4.9,6.6-9.5c0-7-0.2-25.2-0.2-25.2s-5.6,0.9-13.5,0.9c-20,0-26.3-12.7-29.3-19.8c-3.9-9.3-9-13.6-14.4-17.1
                     c-3.3-2.1-4.1-4.6-0.2-5.4c17.7-3.3,22.2,20,34.1,23.7c8.4,2.6,19.3,1.5,24.7-2c0.7-7.1,5.9-13.3,10.2-16.5
@@ -13,7 +13,7 @@ class ReactLogo extends Component {
                     c-0.2,10.3-1.3,19-3.3,26.4l-1.1,3.8c0,0-0.6,1.8-1.3,3.5l-0.8,1.9c-8.9,19.5-27.2,26.8-56.8,29.8c9.6,6,12.3,13.5,12.3,33.9
                     s-0.3,23.1-0.2,27.8c0.1,4.1,3.4,7.1,6.3,9.4C291.6,257.3,328,209.4,328,153.1z"/>
             </ManageChildren>
-        )
+             )
     }
 }
 

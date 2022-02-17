@@ -16,7 +16,7 @@ import DemoIcon from '../../assets/icons/demo'
 const navBar = ( props ) => {
     return (
 
-        <AppBar style={{background: "rgb(50,50,50)"}} position="sticky" color="inherit" elevation={10}>
+        <AppBar style={{background: "rgb(45, 45,45)"}} position="sticky" color="inherit" elevation={10}>
             <Toolbar>
                 <Hidden only={['md', 'lg', 'xl']}>
                     <IconButton onClick={props.toggleDrawer}>

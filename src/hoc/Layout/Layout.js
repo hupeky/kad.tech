@@ -34,12 +34,12 @@ import ChatIcon from '@material-ui/icons/Chat'
 
 
 import scrollToComponent from 'react-scroll-to-component'
-import {Typography} from '@material-ui/core';
+import {Typography} from '@material-ui/core'
 
 const styles = theme => ( {
     drawerPaperTemp: {
         maxWidth: '350px',
-        backgroundColor: theme.palette.grey.main
+        backgroundColor: "rgb(25,25,25)"
     },
     content: {
         flexGrow: 1
@@ -79,11 +79,11 @@ class Layout extends Component {
             <React.Fragment>
                 <span onScroll={this.props.setCurrentBlockHandler} ></span>
                 <MuiThemeProvider theme={darkTheme}>
-                    <NavBar
-                        toggleDrawer={() => this.toggleDrawer( true )}
+                      <NavBar
+                            toggleDrawer={() => this.toggleDrawer( true )}
                         scrollButton={this.scrollFromButtonHandler}
                         pageBlockData={this.props.pageBlockData} />
-                </MuiThemeProvider>
+              
 
                 <Hidden mdUp={true}>
                     <Drawer
@@ -116,7 +116,7 @@ class Layout extends Component {
                                 {this.props.pageBlockData.map( ( pageBlock, i ) => {
                                     return (
                                         <ListItem key={i} onClick={() => this.scrollFromButtonHandler( pageBlock.ref )} button >
-                                            <ListItemIcon color='secondary'>
+                                            <ListItemIcon style={{color: "rgba(255,255,255,0.5)"}}>
                                                 {pageBlock.icon}
                                             </ListItemIcon>
                                             <Typography variant={'body2'}>{pageBlock.label}</Typography>
@@ -130,7 +130,7 @@ class Layout extends Component {
 
                     </Drawer>
                 </Hidden>
-
+                </MuiThemeProvider>
                 {this.props.children}
                 <MuiThemeProvider theme={darkTheme}>
                     <PageBlock icon={<ChatIcon />} label={'Contact'} backgroundColor={theme.palette.primary.main}>

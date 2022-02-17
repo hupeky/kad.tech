@@ -8,10 +8,10 @@ let globalCustomisation = {
     },
     palette: {
         primary: {
-            main: '#00A2A2'
+            main: '#007575'
         },
         secondary: {
-            main: '#d3207f'
+            main: '#026565'
         },
         grey: {
             main: '#e3e3e3',
@@ -57,7 +57,9 @@ let globalCustomisation = {
             headline: {
                 opacity: 0.6,
                 fontWeight: 500,
-                textAlign:'left'
+                fontSize: "22px",
+                textAlign:'center',
+                padding: "0px 20px"
             }
         },
         MuiListItemIcon: {

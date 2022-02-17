@@ -8,7 +8,7 @@ import classes from './pageBlock.css'
 import Paper from '@material-ui/core/Paper'
 
 
-class PageBlock extends Component {
+class PageBlock extends Component  {
     componentDidMount () {
          let pageBlockData = {
              label: this.props.label,
@@ -24,9 +24,9 @@ class PageBlock extends Component {
         }
         const backgroundColor = {backgroundColor: this.props.backgroundColor}
         return (
-            <section ref={(sectionRef) => { this.sectionRef = sectionRef }} style={backgroundColor} className={[classes.sectionBlock, this.props.onScreen ? 'visible' : null].join( ' ' )}>
+            <section ref={(sectionRef) => { this.sectionRef = sectionRef }} style={{...backgroundColor} } className={[classes.sectionBlock, this.props.onScreen ? 'visible' : null].join( ' ' )}>
                 <Paper elevation={10}>
-                    <div className={classes.contentBlock}>
+                    <div style={{ margin: `${this.props.margin}px auto` }} className={classes.contentBlock}>
                         {this.props.children}
                     </div>
                 </Paper>

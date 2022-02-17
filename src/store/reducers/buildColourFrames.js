@@ -5,7 +5,7 @@ import singleBackdrops from './singleBackdrops'
 // import animSonic from './animSonic'
 // import animKart from './animKart'
 // import animSF2 from './animSF2'
-import abstract from './abstractBackdrops'
+// import abstract from './abstractBackdrops'
 
 let colours = {}
 

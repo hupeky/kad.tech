@@ -30,20 +30,12 @@ const secondaryLinks = (props) => {
 
   return (
     <nav {...props} style={margin}>
-      <a target="_blank" href="https://www.linkedin.com/in/kyehuelin/">
+      {/* <a target="_blank" href="https://www.linkedin.com/in/kyehuelin/">
         <Button outline={props.outline ? true : null}>
           <LinkedInIcon height={25} />
         </Button>
-      </a>
-      <a target="_blank" href="http://kye.tech/pdf/kyehuelin_cv.pdf">
-        <Button
-          outline={props.outline ? true : null}
-          spacer="true"
-          label={"CV"}
-        >
-          <DownloadCVIcon height={25} />
-        </Button>
-      </a>
+      </a> */}
+
     </nav>
   );
 };

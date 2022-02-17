@@ -4,13 +4,13 @@
 
 
 .visible {
-    transition:600ms;
+    transition:800ms;
     opacity: 1;
     transform:translateX(0px);
 }
 
 .notVisible {
-    transition:200ms;
+    transition:800ms;
     opacity: 0;
     transform:translateX(-25px);
 }
