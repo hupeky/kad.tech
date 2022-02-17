@@ -52,7 +52,12 @@ let globalCustomisation = {
             body1: {
                 textAlign: 'left',
                 marginBottom: '30px',
-                opacity: 0.8
+                opacity: 0.8,
+                fontSize: "0.94rem"
+            },
+            body2: {
+                opacity: 0.7,
+                fontSize: "0.8rem"
             },
             headline: {
                 opacity: 0.6,

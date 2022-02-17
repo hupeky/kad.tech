@@ -20,9 +20,9 @@ class SkillsBlockHolder extends Component {
                     let startDelay = this.delay / 1000
                     return (
                         <Grid key={item.id} item xs={this.props.xs} sm={this.props.sm}>
-                            <div style={{transitionDelay: this.props.onScreen === true ? this.delay + 'ms' :  '0ms'}} className={classes.slideIn}>
+                            <div style={{transitionDelay: this.props.onScreen === true ? this.delay + 'ms' :  '0ms', width: "80%", margin: "auto"}} className={classes.slideIn}>
                                 <LogoComponent img={item.img} startDelay={startDelay} onScreen={this.props.onScreen} id={item.id} title={item.title} />
-                                {this.props.type === 'technical' ? <Typography style={{textAlign: "center"}}>{item.title}</Typography> : null}
+                                {this.props.type === 'technical' ? <Typography  style={{textAlign: "center"}}>{item.title}</Typography> : null}
                             </div>
                         </Grid>
                     )

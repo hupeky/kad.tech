@@ -602,7 +602,6 @@ class HomeBanner extends Component {
     }
 
     startDemoHandler = () => {
-        console.log('fuck you')
         this.props.enter3DHandler()
         this.props.startColourAnim( 'animBackdrops' )
     }
@@ -1155,7 +1154,6 @@ class Layout extends Component {
     }
 
     toggleDrawer = ( isOpen ) => {
-        console.log( 'did click toggleDrawer' )
         this.setState( {
             drawerOpen: isOpen
         } )

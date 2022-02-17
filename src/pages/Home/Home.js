@@ -8,10 +8,10 @@ import Display3 from '../../UI/Display3/Display3'
 import Display1 from '../../UI/Display1/Display1'
 import SlideIn from '../../UI/SlideIn/SlideIn'
 
-import shot1 from "../../assets/imgs/kadshow/shot1a.png"
-import shot2 from "../../assets/imgs/kadshow/shot2a.png"
-import shot3 from "../../assets/imgs/kadshow/shot3a.png"
-import shot4 from "../../assets/imgs/kadshow/shot4a.png"
+import shot1 from "../../assets/imgs/kadshow/shot1a.jpg"
+import shot2 from "../../assets/imgs/kadshow/shot2a.jpg"
+import shot3 from "../../assets/imgs/kadshow/shot3a.jpg"
+import shot4 from "../../assets/imgs/kadshow/shot4a.jpg"
 
 
 import {MuiThemeProvider} from '@material-ui/core/styles'
@@ -50,7 +50,7 @@ const home = ( props ) => {
                 <Paper elevation={10}>
                     <HomeBanner />
                 </Paper>
-                <PageBlock margin={50} icon={<SkillsIcon />} label={'Skills'} backgroundColor={"rgb(40,40,40)"}>  </PageBlock>
+                <PageBlock margin={50} icon={<SkillsIcon />} backgroundColor={"rgb(40,40,40)"}>  </PageBlock>
 
                 <PageBlock label={'About us'} icon={<AboutMeIcon />} backgroundColor={theme.palette.primary.main}>
                     <SlideIn partial={true}>
@@ -61,12 +61,12 @@ const home = ( props ) => {
                         <Grid item xs={10} md={8}>
                         <SlideIn partial={true}>
                                 <AboutMeIcon className={classes.pageBlockIcon} />
-                                </SlideIn>
+                     </SlideIn>
                         </Grid>
-                        <Grid item xs={4} sm={2} />
+                           <Grid item xs={4} sm={2} />
                         <Grid item xs={12} />
 
-                        {/* ********** intro */}
+                              {/* ********** intro */}
                         <Grid item xs={1} md={2} />
                         <Grid item xs={10} md={8}>
                             <SlideIn partial={true}>
@@ -75,9 +75,9 @@ const home = ( props ) => {
                                     <Typography variant="body1">KaD.tech is a technology software house building cloud delivered VR and AR apps using web technologies, such as Babylon, Three, React, WebPack. The software being made by us is on the cutting edge of what is possible on webpage and is cross platform / cross browser compatible in a way that has not been seen before.</Typography>
                                 </SlideIn>
                                 <SlideIn partial={true}>
-                               
+
                                   <Typography gutterBottom variant='h3' component={"h3"}>History</Typography>
-                              
+
                                     <Typography variant="body1">KaD.tech was started by two guys; Dan and Kye, who both studied 3d graphics engineering at the same university. Around 6 years ago in their spare-time outside work, Dan started doing research into VR, photogrammetry scanning and skeletal rigging, whilst heading a development team within the financial services industry in London. By coincidence, around the same time Kye had started doing research and development around 3d web-based software for business application.</Typography>
                                 </SlideIn>
                                 <SlideIn partial={true}>
@@ -142,13 +142,13 @@ const home = ( props ) => {
                 <Grid container spacing={8}>
                     <Grid item xs={1} md={2} />
                     <Grid item xs={10} md={8}>
-  
+
 
                     <SlideIn partial={true}>
                         <Typography variant="body1">This is our first web-based 3D application, cross platform, cross browser compliant this software runs on all modern browsers from mobile phones to VR headsets, all from a single JavaScript codebase.  Delivered through the cloud using AWS services to a worldwide audience.</Typography>
                         </SlideIn>
                         <Grid item xs={1} md={2} />
-                  
+
                         </Grid>
                   </Grid>
                   <Grid container spacing={8}>

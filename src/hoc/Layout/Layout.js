@@ -67,7 +67,6 @@ class Layout extends Component {
     }
 
     toggleDrawer = ( isOpen ) => {
-        console.log( 'did click toggleDrawer' )
         this.setState( {
             drawerOpen: isOpen
         } )
@@ -83,7 +82,7 @@ class Layout extends Component {
                             toggleDrawer={() => this.toggleDrawer( true )}
                         scrollButton={this.scrollFromButtonHandler}
                         pageBlockData={this.props.pageBlockData} />
-              
+
 
                 <Hidden mdUp={true}>
                     <Drawer

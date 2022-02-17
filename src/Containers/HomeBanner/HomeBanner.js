@@ -40,6 +40,11 @@ const styles = theme => ( {
         [theme.breakpoints.up( 'md' )]: {maxHeight: '600px'},
         [theme.breakpoints.up( 'xl' )]: {maxHeight: '700px'}
     },
+    titleSizeBreaks: {
+        [theme.breakpoints.down( 'xs' )]: {fontSize: '16px'},
+        [theme.breakpoints.up( 'sm' )]: {maxHeight: '22x'},
+        [theme.breakpoints.up( 'xl' )]: {maxHeight: '29px'}
+    },
     heightBreaks: {
         [theme.breakpoints.down( 'xs' )]: {height: '500px'},
         [theme.breakpoints.up( 'sm' )]: {height: '550px'},
@@ -124,7 +129,7 @@ class HomeBanner extends Component {
                         }}
                     >
                         <IconButton
-                            aria-label="open drawer"
+                             aria-label="open drawer"
                             onClick={this.handleDrawerToggle}
                             className={classes.navIconHide}
                         >
@@ -140,9 +145,9 @@ class HomeBanner extends Component {
                         >
                             <div className={myClasses.bg} />
                             <div className={[myClasses.contentHolder, classes.maxHeightBreaks].join( " " )}>
-                 
-                                <img style={{display: "block", width: "60%", height: "auto" , maxWidth: "350px"}} src={kadtechLogo} height={200} />
-                                {/* <Typography style={{opacity: 1}} variant={'headline'}>3D Web Software Engineering</Typography> */}
+
+                                <img style={{display: "block", width: "60%", height: "auto" , maxWidth: "350px", minWidth: "250px"}} src={kadtechLogo} height={200} />
+                                <Typography className={[classes.titleSizeBreaks].join( " " )} style={{opacity: 0.8, marginTop: "10px"}} variant={'headline'}>3D Web Software Engineering</Typography>
 
 
 

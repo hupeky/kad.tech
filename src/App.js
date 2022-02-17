@@ -1,7 +1,7 @@
 import React, {Component} from 'react'
 import {Route, Switch} from 'react-router-dom'
 
-import 'typeface-roboto'
+// import 'typeface-roboto'
 import Layout from './hoc/Layout/Layout'
 
 import Home from './pages/Home/Home'

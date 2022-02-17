@@ -112,7 +112,7 @@
       "react-app"
     ]
   },
-  "homepage": "https://kye.tech",
+  "homepage": "http://kad.tech",
   "eslintConfig": {
     "extends": "react-app"
   },

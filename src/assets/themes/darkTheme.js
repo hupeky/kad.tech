@@ -12,11 +12,7 @@ const darkTheme = createMuiTheme( {
         ...globalCustomisation.overrides,
         MuiTypography: {
             ...globalCustomisation.overrides.MuiTypography,
-            body2: {
-                textAlign: 'left',
-                marginTop: '10px',
-                opacity: 0.8
-            },
+
             h1: {
               color: "white",
               opacity: 0.8

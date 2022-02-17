@@ -21,15 +21,15 @@ class CardManager extends Component {
         )
         this.intervalAnimation = setInterval(
             () => {
-                if(!document.hidden) {
+                if (!document.hidden) {
                     this.props.setWaveHeight( Math.floor(Math.random() * 10) )
-                    this.props.setWaveSpeed( (Math.floor(Math.random() * 10)  ) +3)
+                          this.props.setWaveSpeed( (Math.floor(Math.random() * 10)  ) +3)
                     this.props.setBounceSpeed( Math.floor(Math.random() * 5 + 1))
-                
+
                     this.props.startAnimation( {x: Math.floor( Math.random() * this.props.dimensions.x ), z: Math.floor( Math.random() * this.props.dimensions.z )} )
-    
+
                 }
-      
+
 
         }
             , 7000)
@@ -83,7 +83,7 @@ const mapDispatchToProps = dispatch => {
         setWaveShape: ( waveShape ) => dispatch( {type: actionTypes.SET_WAVE_SHAPE, waveShape: waveShape} ),
         setWaveHeight: ( waveHeight ) => dispatch( {type: actionTypes.SET_WAVE_HEIGHT, waveHeight: waveHeight} ),
         setWaveSpeed: ( waveSpeed ) => dispatch( {type: actionTypes.SET_WAVE_SPEED, waveSpeed: waveSpeed} ),
-        setBounceSpeed: ( bounceSpeed ) => dispatch( {type: actionTypes.SET_BOUNCE_SPEED, bounceSpeed: bounceSpeed} ),
+        setBounceSpeed: ( bounceSpeed ) => dispatch( {type: actionTypes.SET_BOUNCE_SPEED, bounceSpeed: bounceSpeed} )
     }
 }
 

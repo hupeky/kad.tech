@@ -19,17 +19,27 @@
   "[json]": {
     "editor.formatOnSave": true
   },
-  "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": true
+  "[js]": {
+    "editor.formatOnSave": true
   },
+
   "files.eol": "\n",
   "css.lint.validProperties": ["composes"],
   "css.lint.unknownAtRules": "ignore",
   "scss.lint.validProperties": ["composes"],
   "scss.lint.unknownAtRules": "ignore",
-  "eslint.workingDirectories": ["/src"],
+  "eslint.workingDirectories": [
+    "./src", 
+],
 
-  "workbench.editor.enablePreview": false,
-  "workbench.editor.enablePreviewFromQuickOpen": false,
-  "editor.tabSize": 2
+
+
+
+
+
+
+"editor.codeActionsOnSave": {
+  "source.fixAll": true,
+  "source.fixAll.eslint": false
+}
 }

@@ -14,7 +14,7 @@ colours = {...singleBackdrops}
 // colours.sonicAnim = animSonic
 // colours.animKart = animKart
 // colours.animSF2 = animSF2
-//colours = Object.assign(abstract, colours)
+// colours = Object.assign(abstract, colours)
 
 
 const reverseArray = ( array ) => {
@@ -33,7 +33,7 @@ const normaliseArray = ( array ) => {
         for ( let z = 0; z < array.shape[1]; z++ ) {
             for ( let rgba = 0; rgba < array.shape[2]; rgba++ ) {
                 const currentVal = array.get( x, z, rgba )
-                array.set( x, z, rgba, currentVal / 255 )
+                  array.set( x, z, rgba, currentVal / 255 )
             }
         }
     }
