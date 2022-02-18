@@ -1,3 +1,9 @@
+This was an ejected react app project. 
+So it will need recreating to work with a fresh react-app env at some point
+
+in order to get this project to build. use NVM and use version 9.x of node to support the version of eslint that is in the system
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
 Below you will find some information on how to perform common tasks.<br>

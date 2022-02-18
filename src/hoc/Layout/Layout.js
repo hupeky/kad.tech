@@ -113,14 +113,17 @@ class Layout extends Component {
                                     <Typography variant={'body2'}>Home</Typography>
                                 </ListItem>
                                 {this.props.pageBlockData.map( ( pageBlock, i ) => {
-                                    return (
-                                        <ListItem key={i} onClick={() => this.scrollFromButtonHandler( pageBlock.ref )} button >
-                                            <ListItemIcon style={{color: "rgba(255,255,255,0.5)"}}>
-                                                {pageBlock.icon}
-                                            </ListItemIcon>
-                                            <Typography variant={'body2'}>{pageBlock.label}</Typography>
-                                        </ListItem>
-                                    )
+                                    if (pageBlock.label) {
+                                        return (
+                                            <ListItem key={i} onClick={() => this.scrollFromButtonHandler( pageBlock.ref )} button >
+                                                <ListItemIcon style={{color: "rgba(255,255,255,0.5)"}}>
+                                                    {pageBlock.icon}
+                                                </ListItemIcon>
+                                                <Typography variant={'body2'}>{pageBlock.label}</Typography>
+                                            </ListItem>
+                                        )
+                                    }
+                     
                                 } )}
                             </List>
 
