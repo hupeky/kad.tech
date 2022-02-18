@@ -3,14 +3,12 @@ import React, {Component} from 'react'
 import {withStyles} from '@material-ui/core/styles'
 
 import Card from '@material-ui/core/Card'
-import CardHeader from '@material-ui/core/CardHeader'
 import CardContent from '@material-ui/core/CardContent'
 import CardActions from '@material-ui/core/CardActions'
 
 import IconButton from '@material-ui/core/IconButton'
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore'
 import Collapse from '@material-ui/core/Collapse'
-import Avatar from '@material-ui/core/Avatar'
 
 import LazyLoad from 'react-lazyload'
 import Spinner from '../../../UI/Spinner/Spinner'
@@ -64,21 +62,14 @@ class ReferenceItem extends Component {
     }
 
     render () {
-        const imgProps = {width: '80%', height: '80%'}
         const {classes} = this.props
         return (
             <LazyLoad
                 height={500}
-                offset={40000}
+                offset={2000}
                 placeholder={<Spinner />}>
                 <Card className={classes.card}>
-                    <CardHeader
-                        className={classes.title}
-                        avatar={<Avatar aria-label="Recipe" imgProps={imgProps} src={this.props.logo}></Avatar>}
-                        title={this.props.title}
-                    />
-
-                    {this.props.url ? <div className={[myClasses.imgHolder, this.props.onScreen ? myClasses.onScreen : null].join( " " )}>
+                    {this.props.url ? <div className={[myClasses.imgHolder].join( " " )}>
                         <div className={myClasses.img} style={{paddingTop: this.props.height, backgroundImage: `url(${this.props.url})`}} />
                     </div> :
                     <div className={myClasses.videoWrapper}>

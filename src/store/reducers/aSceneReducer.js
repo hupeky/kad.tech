@@ -8,35 +8,15 @@ const calcualteDistanceLookup = ( newX, newZ ) => {
         let updatedDistanceLookUpRow = []
         for ( let z = 0; z < newZ; z++ ) {
             let pixelDistanceArray = []
-            let diagonal1DistanceArray = []
-            let diagonal2DistanceArray = []
-            let verticalDistanceArray = []
-            let horizontalDistanceArray = []
             for ( let x2 = 0; x2 < newX; x2++ ) {
                 let pixelDistanceArrayRow = []
-                let diagonal1DistanceArrayRow = []
-                let diagonal2DistanceArrayRow = []
-                let verticalDistanceArrayRow = []
-                let horizontalDistanceArrayRow = []
                 for ( let z2 = 0; z2 < newZ; z2++ ) {
                     pixelDistanceArrayRow[z2] = Math.hypot( Math.abs( x - x2 ), Math.abs( z - z2 ) ) // pixel
-                    diagonal1DistanceArrayRow[z2] = Math.abs( ( x2 + z2 ) - ( x + z ) ) // diagonal 1
-                    diagonal2DistanceArrayRow[z2] = Math.abs( ( x2 - z2 ) - ( x - z ) ) // diagonal 2
-                    verticalDistanceArrayRow[z2] = Math.hypot( Math.abs( x - x2 ), Math.abs( z2 - z2 ) ) // vertical
-                    horizontalDistanceArrayRow[z2] = Math.hypot( Math.abs( x2 - x2 ), Math.abs( z - z2 ) ) // horizontal
                 }
                 pixelDistanceArray.push( pixelDistanceArrayRow )
-                diagonal1DistanceArray.push( diagonal1DistanceArrayRow )
-                diagonal2DistanceArray.push( diagonal2DistanceArrayRow )
-                verticalDistanceArray.push( verticalDistanceArrayRow )
-                horizontalDistanceArray.push( horizontalDistanceArrayRow )
             }
             updatedDistanceLookUpRow[z] = {}
             updatedDistanceLookUpRow[z].pixel = pixelDistanceArray
-            updatedDistanceLookUpRow[z].diag1 = diagonal1DistanceArray
-            updatedDistanceLookUpRow[z].diag2 = diagonal2DistanceArray
-            updatedDistanceLookUpRow[z].vert = verticalDistanceArray
-            updatedDistanceLookUpRow[z].horizontal = horizontalDistanceArray
         }
         updatedDistanceLookUp.push( updatedDistanceLookUpRow )
     }
@@ -44,8 +24,8 @@ const calcualteDistanceLookup = ( newX, newZ ) => {
 }
 
 const dim = {
-    x:55,
-    z:45
+    x:40,
+    z:30
 }
 
 const initialState = {

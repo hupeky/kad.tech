@@ -11,7 +11,7 @@ const exampleImageHolder = (props) => {
     let exampleImages = exampleImageData[props.company].map((exampleImage,i) => {
         let percent = calculatePercent( exampleImage.height, exampleImage.width )
         return (
-            <ExampleImage height={`${percent}%`} logo={exampleImageData.logos[props.company]} key={i} url={exampleImage.url} video={exampleImage.video} title={exampleImage.title} body={exampleImage.body}/>
+            <ExampleImage height={`${percent}%`}  key={i} url={exampleImage.url} />
         )
     })
     return exampleImages

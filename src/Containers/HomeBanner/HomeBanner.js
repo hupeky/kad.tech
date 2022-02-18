@@ -5,7 +5,7 @@ import DrawerContents from './DrawerContents/DrawerContents'
 
 import * as actionTypes from '../../store/actions/actions'
 
-import Drawer from '@material-ui/core/Drawer'
+// import Drawer from '@material-ui/core/Drawer'
 import Hidden from '@material-ui/core/Hidden'
 import MenuIcon from '@material-ui/icons/Menu'
 import IconButton from '@material-ui/core/IconButton'
@@ -117,28 +117,6 @@ class HomeBanner extends Component {
                     <MenuIcon />
                 </IconButton> : null}
 
-
-                <Hidden xsUp>
-                    <Drawer
-                        variant="temporary"
-                        anchor='right'
-                        open={this.state.mobileOpen}
-                        onClose={this.handleDrawerToggle}
-                        classes={{
-                            paper: classes.drawerPaperTemp
-                        }}
-                    >
-                        <IconButton
-                             aria-label="open drawer"
-                            onClick={this.handleDrawerToggle}
-                            className={classes.navIconHide}
-                        >
-                            <CloseIcon />
-                        </IconButton>
-                        <DrawerContents align='center' />
-                    </Drawer>
-                </Hidden>
-
                 <div className={classes.content}>
                     <AScene>
                         <div className={[myClasses.overlay, this.props.enter3D ? myClasses.removed : null].join( " " )}
@@ -149,48 +127,10 @@ class HomeBanner extends Component {
                                 <img style={{display: "block", width: "60%", height: "auto" , maxWidth: "350px", minWidth: "250px"}} src={kadtechLogo} height={200} />
                                 <Typography className={[classes.titleSizeBreaks].join( " " )} style={{opacity: 0.8, marginTop: "10px"}} variant={'headline'}>3D Web Software Engineering</Typography>
 
-
-
-                                {/* <Hidden mdUp>
-                                    <Button style={{marginTop:'10px',marginBottom:'5px'}} click={this.startDemoHandler} outline='true'  spacer="true" label={'Click to play Pixels'}>
-                                        <DemoIcon height={25} />
-                                    </Button>
-
-                                    <Typography style={{width: '90%', maxWidth: '280px', textAlign: 'center', fontSize: '0.75em'}} variant={'body1'}>(Behind this text is a demo I call 'pixels': It's a homage to the games that inspired me to love tech)</Typography>
-                                </Hidden> */}
                             </div>
                         </div>
                     </AScene>
                 </div>
-
-                <Hidden xsUp implementation="css">
-                    <Drawer
-                        variant="persistent"
-                        anchor='right'
-
-                        open
-                        classes={{
-                            paper: [classes.drawerPaper, classes.heightBreaks].join( " " )
-                        }}
-                    >
-                        <DrawerContents />
-                        <div className={[myClasses.drawerOverlay, this.props.enter3D ? myClasses.removed : null].join( " " )}>
-                            <div className={myClasses.bg} />
-                            <div className={[myClasses.contentHolder, classes.maxHeightBreaks].join( " " )}>
-                                <Typography style={{opacity: 1,marginBottom:'10px'}} variant={'headline'}>Interactive demo</Typography>
-                                <Typography style={{marginBottom: '15px', textAlign: 'right'}} variant={'body1'}>Come and play this demo: 'pixels' a homage to the games that inspired me to love tech</Typography>
-
-
-                                <Button style={{marginBottom: '5px'}} click={this.startDemoHandler} outline='true' spacer="true" label={'Click to play Pixels'}>
-                                    <DemoIcon height={25} />
-                                </Button>
-
-                                <img className={myClasses.arrowLeft} src={arrowLeft} role="presentation" />
-                            </div>
-                        </div>
-                    </Drawer>
-
-                </Hidden>
             </section>
 
         )

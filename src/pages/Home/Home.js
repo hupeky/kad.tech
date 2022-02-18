@@ -8,11 +8,6 @@ import Display3 from '../../UI/Display3/Display3'
 import Display1 from '../../UI/Display1/Display1'
 import SlideIn from '../../UI/SlideIn/SlideIn'
 
-import shot1 from "../../assets/imgs/kadshow/shot1a.jpg"
-import shot2 from "../../assets/imgs/kadshow/shot2a.jpg"
-import shot3 from "../../assets/imgs/kadshow/shot3a.jpg"
-import shot4 from "../../assets/imgs/kadshow/shot4a.jpg"
-
 
 import {MuiThemeProvider} from '@material-ui/core/styles'
 import {withTheme, withStyles} from '@material-ui/core/styles'
@@ -23,9 +18,8 @@ import Typography from '@material-ui/core/Typography'
 import darkTheme from '../../assets/themes/darkTheme'
 
 import SkillsBlockHolder from '../../UI/skillsBlockHolder/skillsBlockHolder'
-// import ExampleImageHolder from '../../UI/ExampleImageHolder/ExampleImageHolder'
+ import ExampleImageHolder from '../../UI/ExampleImageHolder/ExampleImageHolder'
 
-// import aboutMeIcon from '../../assets/SVG/pageBlockIcons/aboutMe.svg'
 import ExamplesIcon from '@material-ui/icons/Devices'
 import SkillsIcon from '@material-ui/icons/Settings'
 import AboutMeIcon from '@material-ui/icons/FormatQuote'
@@ -134,7 +128,7 @@ const home = ( props ) => {
                             <SlideIn partial={true}>
                             <BurstMode style={{color: 'white', padding: '15px'}} className={classes.pageBlockIcon} />
                             </SlideIn>
-                       
+
                     </Grid>
                 </Grid>
 
@@ -155,10 +149,11 @@ const home = ( props ) => {
                   <Grid container spacing={8}>
                 <Grid item md={1} />
                     <Grid item xs={12} md={10}>
-                    <img src={shot1} style={{width: "calc(100% - 20px)", height: "auto", margin: "10px"}}></img>
+                    <ExampleImageHolder company='kadtech' />
+                    {/* <img src={shot1} style={{width: "calc(100% - 20px)", height: "auto", margin: "10px"}}></img>
                     <img src={shot2} style={{width: "calc(100% - 20px)", height: "auto", margin: "10px"}}></img>
                     <img src={shot3} style={{width: "calc(100% - 20px)", height: "auto", margin: "10px"}}></img>
-                    <img src={shot4} style={{width: "calc(100% - 20px)", height: "auto", margin: "10px"}}></img>
+                    <img src={shot4} style={{width: "calc(100% - 20px)", height: "auto", margin: "10px"}}></img> */}
                     </Grid>
            </Grid>
 
