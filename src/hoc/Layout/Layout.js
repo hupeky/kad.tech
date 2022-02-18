@@ -139,7 +139,7 @@ class Layout extends Component {
                         <SlideIn partial={true}>
                             <Display3>Get in touch</Display3>
                         </SlideIn>
-                        <ScaleIn><ChatIcon style={{color: 'white', padding: '30px 15px'}} className={classes.pageBlockIcon} /></ScaleIn>
+                        <SlideIn partial={true}><ChatIcon style={{color: 'white', padding: '30px 15px'}} className={classes.pageBlockIcon} /></SlideIn>
                         <Grid container spacing={8}>
                             <Grid item xs={1} md={2} />
                             <Grid item xs={10} md={8}>

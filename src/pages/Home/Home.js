@@ -130,10 +130,11 @@ const home = ( props ) => {
                     <Grid item xs={10} md={8}>
                         <SlideIn partial={true}>
                             <Display3>Examples</Display3>
+                            </SlideIn>
                             <SlideIn partial={true}>
                             <BurstMode style={{color: 'white', padding: '15px'}} className={classes.pageBlockIcon} />
                             </SlideIn>
-                        </SlideIn>
+                       
                     </Grid>
                 </Grid>
 
@@ -152,8 +153,8 @@ const home = ( props ) => {
                         </Grid>
                   </Grid>
                   <Grid container spacing={8}>
-                <Grid id="fick" item xs={1} md={1} />
-                    <Grid item xs={10} md={10}>
+                <Grid id="fick" item xs={0} md={1} />
+                    <Grid item xs={12} md={10}>
                     <img src={shot1} style={{width: "100%", height: "auto", margin: "10px"}}></img>
                     <img src={shot2} style={{width: "100%", height: "auto", margin: "10px"}}></img>
                     <img src={shot3} style={{width: "100%", height: "auto", margin: "10px"}}></img>

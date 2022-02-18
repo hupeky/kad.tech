@@ -9,7 +9,7 @@ const footer = ( props ) => {
             <div className={classes.column}>
                 {/* <Typography variant='subheading'><a href="tel:+44 7490 696 991">+44 7702 527 139</a> </Typography> */}
 
-                <Typography style={{marginBottom: '20px'}} variant='subheading'> <a href="mailto:admin@kad.tech">admin@kad.tech</a></Typography>
+                <Typography style={{marginBottom: '20px'}} variant='subheading'> <a target="_blank" href="mailto:admin@kad.tech">admin@kad.tech</a></Typography>
                 <Typography style={{marginBottom: '20px', color: "rgba(255,255,255,0.5"}} variant='subheading'> Copyright 2022 - KaD.tech Studio - All rights reserved</Typography>
          
             </div>
