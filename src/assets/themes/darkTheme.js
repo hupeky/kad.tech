@@ -13,26 +13,6 @@ const darkTheme = createMuiTheme( {
         MuiTypography: {
             ...globalCustomisation.overrides.MuiTypography,
 
-            h1: {
-              color: "white",
-              opacity: 0.8
-          },
-          h2: {
-            color: "white",
-            opacity: 0.8
-        },
-        h3: {
-          color: "white",
-          opacity: 0.8,
-          marginBottom: "15px",
-      },            h4: {
-        color: "white",
-        opacity: 0.8
-    },
-    h5: {
-      color: "white",
-      opacity: 0.8
-  },
         }
     }
 } )

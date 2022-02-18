@@ -7,7 +7,7 @@ class AnimateCam extends Component {
         AFRAME.registerComponent( 'animate-cam', {
             schema: {
                 animate: {type: 'boolean', default: false},
-                position: {type: 'vec3', default: '0 0 0'}
+                position: {type: 'vec3', default: {x: 0, y: 0, z: 0}}
             },
 
             init: function () {
