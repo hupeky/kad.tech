@@ -13,9 +13,6 @@ class Colour extends Component {
                 dimensions: {type: 'vec2', default: {x: 0, y: 0}},
                 lookup: {type: 'array', default: [0,0,0,0]}
             },
-
-
-
             init: function () {
                 const textureOffset = true
 

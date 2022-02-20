@@ -117,7 +117,7 @@ class HomeBanner extends Component {
                             <div className={myClasses.bg} />
                             <div className={[myClasses.contentHolder, classes.maxHeightBreaks].join( " " )}>
 
-                                    <img style={{display: "block",margin: "auto", width: "60%", background: "rgba(0,0,0,0.6)", height: "auto" , maxWidth: "300px", minWidth: "220px"}} src={kadtechLogo} height={200} />
+                                    <img style={{display: "block", borderRadius: "20px", padding: "5px", smargin: "auto", width: "60%", background: "rgba(0,0,0,0.6)", height: "auto" , maxWidth: "300px", minWidth: "220px"}} src={kadtechLogo} height={200} />
                                 {/* <Typography className={[classes.titleSizeBreaks].join( " " )} style={{opacity: 0.8, marginTop: "5px"}} variant={'headline'}>3D Web Software Engineering</Typography> */}
 
 
