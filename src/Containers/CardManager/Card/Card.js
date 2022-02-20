@@ -1,17 +1,19 @@
 import React from 'react'
-import 'aframe'
+
 
 const Card = ( props ) => {
     const {height} = props
+
     return (
         <a-box
             cursor-listener={`x:${props.x}; z:${props.z}`} clickIdPass={props.click} x={props.x} z={props.z}
             animate={`distance: ${props.distance}; animIndex:${props.animInd}; paused:${props.paused}`}
-            colour={`x:${props.x}; z:${props.z}; colourIndex:${props.colourInd};`}
-            material="color: #000; roughness: 0.8; metalness: 0.1"
+            material="color: #FFF; roughness: 0.8; metalness: 0.1; opacity: 0"
             position={props.position}
-            shadow="cast: true; receive: true"
-            geometry={`primitive: box; height:${height}; width:0.95; depth:0.95`}>
+            src="#logo"
+            colourFromTexture={`x:${props.x}; z:${props.z}; colourIndex:${props.colourInd}; dimensions:${props.dimensions.x} ${props.dimensions.z}; lookup:${props.lookup[0]}, ${props.lookup[1]}, ${props.lookup[2]}, ${props.lookup[3]};`}
+            geometry={`primitive: box; skipCache: true; height:${height}; width:0.96; depth:0.96`}>
+
         </a-box>
     )
 }

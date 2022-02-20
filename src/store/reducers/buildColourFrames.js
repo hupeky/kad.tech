@@ -1,6 +1,6 @@
-import getPixels from 'get-pixels'
+// import getPixels from 'get-pixels'
 
-import singleBackdrops from './singleBackdrops'
+// //import singleBackdrops from './singleBackdrops'
 // import animBackdrops from './animBackdrops'
 // import animSonic from './animSonic'
 // import animKart from './animKart'
@@ -9,7 +9,7 @@ import singleBackdrops from './singleBackdrops'
 
 let colours = {}
 
-colours = {...singleBackdrops}
+// colours = {...singleBackdrops}
 // colours.animBackdrops = animBackdrops
 // colours.sonicAnim = animSonic
 // colours.animKart = animKart

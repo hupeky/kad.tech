@@ -11,7 +11,7 @@ let globalCustomisation = {
             main: '#007575'
         },
         secondary: {
-            main: '#026565'
+            main: 'rgb(200, 85, 110)'
         },
         grey: {
             main: '#e3e3e3',
@@ -37,14 +37,14 @@ let globalCustomisation = {
                 position:'relative',
                 display: 'flex',
                 width: '95%',
-                margin:'20px auto',
+                margin:'20px auto'
                 // [theme.breakpoints.down( 'sm' )]: {flexDirection: 'column'}
             }
 
         },
         MuiCardContent: {
             root: {
-                textAlign: 'left',
+                textAlign: 'left'
             }
 
         },

@@ -39,7 +39,7 @@ const navBar = ( props ) => {
                 <SecondaryLinks  align='right' />
             </Toolbar>
         </AppBar>
-  
+
 
     )
 }

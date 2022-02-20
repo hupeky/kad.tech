@@ -12,10 +12,10 @@ class Camera extends Component {
                 fov="25"
                 near="1"
                 far="4000"
-                position={this.props.enter3D ? '-10 35 40' : '0 20 35'} /* position="-10 30 40" */
+                position={this.props.enter3D ? '-10 24 32' : '0 20 30'} /* position="-10 30 40" */
                 orbit-controls={`
                 autoRotate: ${this.props.enter3D ? 'false;' : 'true;'} 
-                    autoRotateSpeed: 0.10   ; 
+                    autoRotateSpeed: 0.06   ; 
                     target: #center;
                     enableDamping: true;
                     dampingFactor: 0.125;

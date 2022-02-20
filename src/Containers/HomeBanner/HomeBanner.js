@@ -1,15 +1,11 @@
 import React, {Component} from 'react'
 import {connect} from 'react-redux'
-
-import DrawerContents from './DrawerContents/DrawerContents'
-
 import * as actionTypes from '../../store/actions/actions'
 
 // import Drawer from '@material-ui/core/Drawer'
-import Hidden from '@material-ui/core/Hidden'
 import MenuIcon from '@material-ui/icons/Menu'
 import IconButton from '@material-ui/core/IconButton'
-import kadtechLogo from "../../assets/imgs/kadtech-logo.png"
+ import kadtechLogo from "../../assets/imgs/kadtech-logo.png"
 
 import AScene from '../../stateless/AScene/AScene'
 import {withStyles} from '@material-ui/core/styles'
@@ -17,11 +13,6 @@ import {withStyles} from '@material-ui/core/styles'
 import myClasses from './HomeBanner.css'
 import {Typography} from '@material-ui/core'
 
-// import SecondaryLinks from '../../stateless/secondaryLinks/secondaryLinks'
-import Button from '../../UI/Button/Button'
-import DemoIcon from '../../assets/icons/demo'
-import arrowLeft from '../../assets/icons/arrowLeft.svg'
-import CloseIcon from '@material-ui/icons/Close'
 const drawerWidth = 400
 
 const styles = theme => ( {
@@ -42,8 +33,8 @@ const styles = theme => ( {
     },
     titleSizeBreaks: {
         [theme.breakpoints.down( 'xs' )]: {fontSize: '16px'},
-        [theme.breakpoints.up( 'sm' )]: {maxHeight: '22x'},
-        [theme.breakpoints.up( 'xl' )]: {maxHeight: '29px'}
+        [theme.breakpoints.up( 'sm' )]: {maxHeight: '10px'},
+        [theme.breakpoints.up( 'xl' )]: {maxHeight: '10px'}
     },
     heightBreaks: {
         [theme.breakpoints.down( 'xs' )]: {height: '500px'},
@@ -77,8 +68,10 @@ const styles = theme => ( {
 
     },
     content: {
-        flexGrow: 1
+        flexGrow: 1,
+        background: "rgba(0, 0, 0, 0.5)"
     },
+
     blockGreenText: {
         backgroundColor: theme.palette.primary.main,
         padding: '3px 20px',
@@ -124,8 +117,10 @@ class HomeBanner extends Component {
                             <div className={myClasses.bg} />
                             <div className={[myClasses.contentHolder, classes.maxHeightBreaks].join( " " )}>
 
-                                <img style={{display: "block", width: "60%", height: "auto" , maxWidth: "350px", minWidth: "250px"}} src={kadtechLogo} height={200} />
-                                <Typography className={[classes.titleSizeBreaks].join( " " )} style={{opacity: 0.8, marginTop: "10px"}} variant={'headline'}>3D Web Software Engineering</Typography>
+                                    <img style={{display: "block",margin: "auto", width: "60%", background: "rgba(0,0,0,0.6)", height: "auto" , maxWidth: "300px", minWidth: "220px"}} src={kadtechLogo} height={200} />
+                                {/* <Typography className={[classes.titleSizeBreaks].join( " " )} style={{opacity: 0.8, marginTop: "5px"}} variant={'headline'}>3D Web Software Engineering</Typography> */}
+
+
 
                             </div>
                         </div>

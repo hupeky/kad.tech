@@ -1,5 +1,4 @@
 import * as actionTypes from '../actions/actions'
-import colours from './buildColourFrames'
 
 const calcualteDistanceLookup = ( newX, newZ ) => {
     // let selectType = ['pixel','diagonal1','diagonal2','vertical','horizontal']
@@ -24,8 +23,8 @@ const calcualteDistanceLookup = ( newX, newZ ) => {
 }
 
 const dim = {
-    x:40,
-    z:30
+    x:35,
+    z:35
 }
 
 const initialState = {
@@ -45,7 +44,7 @@ const initialState = {
     distanceLookUp: calcualteDistanceLookup( dim.x, dim.z ),
     paused: false,
     autoWave: true,
-    colours: colours,
+    // colours: colours,
     colourIndex: 0,
     colourRef: null,
     cubeHeight: 0.6

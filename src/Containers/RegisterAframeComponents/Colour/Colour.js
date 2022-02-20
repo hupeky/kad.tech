@@ -15,14 +15,18 @@ class Colour extends Component {
             schema: {
                 x: {type: 'number', default: 0},
                 z: {type: 'number', default: 0},
-                colourIndex: {type: 'number', default: 0}
+                colourIndex: {type: 'number', default: 0},
+                dimensions: {type: 'vec2', default: {x: 0, y: 0}}
             },
+
+
 
             init: function () {
                 this.el.colourTween = new TimelineLite()
                 this.el.loops = {}
+
                 this.el.object3D.children[0].material.transparent = true
-                this.el.object3D.children[0].material.side = "double"
+                this.el.object3D.children[0].material.side = "single"
                 this.el.object3D.children[0].material.alphaTest = 0.2
             },
             update: function ( oldData ) {
@@ -39,13 +43,13 @@ class Colour extends Component {
 
                     }
                     this.el.object3D.children[0].material.transparent = true
-   
-                    if(thisClass.props.colours) {
+
+                    if (thisClass.props.colours) {
                         thisClass.props.colours[thisClass.props.colourRef].forEach( ( frame ) => {
                             const rgb = frame.rgbaArray.data.slice( frame.rgbaArray.index( this.data.x, this.data.z, 0 ), frame.rgbaArray.index( this.data.x, this.data.z, 0 ) + 4 )
-    
+
                             this.el.colourTween.to( [this.el.object3D.children[0].material.color, this.el.object3D.children[0].material], frame.duration, {r: rgb[0], g: rgb[1], b: rgb[2], opacity: rgb[3], delay: frame.delay, ease: Linear.easeIn} )
-    
+
                             if ( frame.label ) {
                                 this.el.colourTween.addLabel( frame.label )
                             }

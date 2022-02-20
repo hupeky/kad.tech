@@ -11,7 +11,7 @@ let themeCustomisation = {
             main: '#e1675a'
         },
         secondary: {
-            main: '#e1675a'
+            main: '#D9004A'
         },
         grey: {
             main: '#E9E9E9',
@@ -25,10 +25,10 @@ let themeCustomisation = {
             width: '100%',
             backgroundColor: 'none',
             position:'relative'
-          },
-        },
+          }
+        }
       }
-    
+
 }
 
 export default themeCustomisation

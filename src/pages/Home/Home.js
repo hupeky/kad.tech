@@ -44,7 +44,7 @@ const home = ( props ) => {
                 <Paper elevation={10}>
                     <HomeBanner />
                 </Paper>
-                <PageBlock margin={50} icon={<SkillsIcon />} backgroundColor={"rgb(40,40,40)"}>  </PageBlock>
+                <PageBlock margin={20}  backgroundColor={"rgb(40,40,40)"}>  <Display1 margin={0} gutterBottom variant='subheading'>...3D Web Software Engineering</Display1> </PageBlock>
 
                 <PageBlock label={'About us'} icon={<AboutMeIcon />} backgroundColor={theme.palette.primary.main}>
                     <SlideIn partial={true}>
@@ -70,7 +70,7 @@ const home = ( props ) => {
                                 </SlideIn>
                                 <SlideIn partial={true}>
 
-                                  <Typography gutterBottom variant='subheading'>History</Typography>
+                                  <Display1 gutterBottom variant='subheading'>History</Display1>
 
                                     <Typography variant="body1">KaD.tech was started by two guys; Dan and Kye, who both studied 3d graphics engineering at the same university. Around 6 years ago in their spare-time outside work, Dan started doing research into VR, photogrammetry scanning and skeletal rigging, whilst heading a development team within the financial services industry in London. By coincidence, around the same time Kye had started doing research and development around 3d web-based software for business application.</Typography>
                                 </SlideIn>
@@ -100,7 +100,7 @@ const home = ( props ) => {
                     <Grid item xs={10} md={8}>
                     <SlideIn partial={true}>
                             <SkillsIcon style={{color: 'white', padding: '15px'}} className={classes.pageBlockIcon} />
-                            </SlideIn>
+                                        </SlideIn>
 
                         <SlideIn partial={true}>
                             <Typography variant="body1">Here are just some of the core technologies and software we use inhouse on a daily basis.</Typography>
@@ -108,7 +108,7 @@ const home = ( props ) => {
 
                         {/* ********** technical skill set */}
                         <Display1>Technical</Display1>
-                        <SkillsBlockHolder type={'technical'} />
+                                    <SkillsBlockHolder type={'technical'} />
 
                         {/* ********** software skill set */}
                         <Display1>Software</Display1>
