@@ -4,8 +4,8 @@ import Typography from '@material-ui/core/Typography'
 
 const styles = theme => ( {
     display1: {
-        [theme.breakpoints.up( 'xs' )]: {fontSize: '1.1em'},
-        [theme.breakpoints.up( 'sm' )]: {fontSize: '1.3em'},
+        [theme.breakpoints.up( 'xs' )]: {fontSize: '1.2em'},
+        [theme.breakpoints.up( 'sm' )]: {fontSize: '1.4em'},
         [theme.breakpoints.up( 'md' )]: {fontSize: '1.6em'},
         [theme.breakpoints.up( 'lg' )]: {fontSize: '1.9em'},
         fontWeight: 500,

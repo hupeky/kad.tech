@@ -6,8 +6,12 @@ class SkyGradient extends Component {
     componentWillMount () {
         // var top = new THREE.Vector3( 0.7, 0.1, 0.4 )
         // var bottom = new THREE.Vector3( 0.25, 0.1, 0.4 )
-                var top = new THREE.Vector3( 0.13,0.13,0.13 )
-        var bottom = new THREE.Vector3( 0.13,0.13,0.13 )
+        const red = new THREE.Vector3( 196/255,86/255,112/255 )
+        const darkRed = new THREE.Vector3( 135/255,60/255,74/255 )
+        const blue = new THREE.Vector3( 10/255, 155/255, 164/255 )
+        const black = new THREE.Vector3( 0.13, 0.13,0.13 )
+        var top = darkRed
+        var bottom =  black
         AFRAME.registerShader( 'gradient', {
             schema: {
                 topcolor: {type: 'vec3', default: top, is: 'uniform'}, // 0.7 0.1 0.4

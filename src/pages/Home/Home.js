@@ -66,16 +66,16 @@ const home = ( props ) => {
                             <SlideIn partial={true}>
 
                                 <SlideIn partial={true}>
-                                    <Typography variant="body1">KaD.tech is a technology software house building cloud delivered VR and AR apps using web technologies, such as Babylon, Three, React, WebPack. The software being made by us is on the cutting edge of what is possible on webpage and is cross platform / cross browser compatible in a way that has not been seen before.</Typography>
+                                    <Typography variant="body1">KaD.tech is a technology software house building cloud delivered VR and AR apps using web technologies, such as Babylon, Three, React, WebPack and many more. The software being made by us is on the cutting edge of what is possible on a webpage and is cross platform / cross browser compatible in a way that has not been seen before.</Typography>
                                 </SlideIn>
                                 <SlideIn partial={true}>
 
                                   <Display1 gutterBottom variant='subheading'>History</Display1>
 
-                                    <Typography variant="body1">KaD.tech was started by two guys; Dan and Kye, who both studied 3d graphics engineering at the same university. Around 6 years ago in their spare-time outside work, Dan started doing research into VR, photogrammetry scanning and skeletal rigging, whilst heading a development team within the financial services industry in London. By coincidence, around the same time Kye had started doing research and development around 3d web-based software for business application.</Typography>
+                                    <Typography variant="body1">KaD.tech was started by two guys; Kye and Dan (KaD), who both studied 3d graphics engineering at the same university. Around 6 years ago in their spare-time outside work, Dan started doing research into VR, photogrammetry scanning and skeletal rigging, whilst heading a development team within the financial services industry in London. By coincidence, around the same time Kye had started doing research and development into 3d web-based software for business application.</Typography>
                                 </SlideIn>
                                 <SlideIn partial={true}>
-                                    <Typography variant="body1">Two years ago, in a chance conversation, they agreed to embark on a software development project, KaD.tech and the software we are about to launch is the result of that journey.</Typography>
+                                    <Typography variant="body1">In a chance conversation a while back, they agreed to embark on a software development project, and so KaD.tech was born and the software we are about to launch is the result of that journey.</Typography>
                                 </SlideIn>
 
                             </SlideIn>
@@ -140,7 +140,7 @@ const home = ( props ) => {
 
 
                     <SlideIn partial={true}>
-                        <Typography variant="body1">This is our first web-based 3D application, cross platform, cross browser compliant this software runs on all modern browsers from mobile phones to VR headsets, all from a single JavaScript codebase.  Delivered through the cloud using AWS services to a worldwide audience.</Typography>
+                        <Typography variant="body1">This is our first web-based 3D application and runs on all modern browsers from mobile phones, Windows and Mac desktop to VR headsets. Delivered from a single JavaScript codebase through the cloud using Amazon Web Services (AWS) to a worldwide audience.</Typography>
                         </SlideIn>
                         <Grid item xs={1} md={2} />
 
@@ -150,10 +150,6 @@ const home = ( props ) => {
                 <Grid item md={1} />
                     <Grid item xs={12} md={10}>
                     <ExampleImageHolder company='kadtech' />
-                    {/* <img src={shot1} style={{width: "calc(100% - 20px)", height: "auto", margin: "10px"}}></img>
-                    <img src={shot2} style={{width: "calc(100% - 20px)", height: "auto", margin: "10px"}}></img>
-                    <img src={shot3} style={{width: "calc(100% - 20px)", height: "auto", margin: "10px"}}></img>
-                    <img src={shot4} style={{width: "calc(100% - 20px)", height: "auto", margin: "10px"}}></img> */}
                     </Grid>
            </Grid>
 

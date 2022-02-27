@@ -3,6 +3,7 @@ import React from 'react'
 import Button from '../../UI/Button/Button'
 
 import Hidden from '@material-ui/core/Hidden'
+import logo from "../../assets/imgs/kadtech-logo.png"
 
 import AppBar from '@material-ui/core/AppBar'
 import Toolbar from '@material-ui/core/Toolbar'
@@ -22,21 +23,24 @@ const navBar = ( props ) => {
                     <IconButton onClick={props.toggleDrawer}>
                         <MenuIcon />
                     </IconButton>
+                    <img src={logo} style={{height: "50px", width: "auto", marginLeft: "auto" }}/>
                 </Hidden>
                 <Hidden only={['xs', 'sm']}>
-                    <Button spacer="true" click={() => props.scrollButton( document.body )} label={'Home'} >
-                        <DemoIcon height={25} />
-
+                    <Button  click={() => props.scrollButton( document.body )}  >
+                        <img src={logo} style={{height: "50px", width: "auto"}}/>
                     </Button>
                     {props.pageBlockData.map( ( pageBlock, i ) => {
-                        return (
-                            <Button bg={false} click={() => props.scrollButton( pageBlock.ref )} key={i} >
-                                {pageBlock.label}
-                            </Button>
-                        )
+                        if (pageBlock.label) {
+                            return (
+                                <Button bg={false} click={() => props.scrollButton( pageBlock.ref )} key={i} >
+                                    {pageBlock.label}
+                                </Button>
+                            )
+                        }
+
                     } )}
                 </Hidden>
-                <SecondaryLinks  align='right' />
+                {/* <SecondaryLinks  align='right' /> */}
             </Toolbar>
         </AppBar>
 

@@ -1,26 +1,5 @@
 import * as actionTypes from '../actions/actions'
 
-const calcualteDistanceLookup = ( newX, newZ ) => {
-    // let selectType = ['pixel','diagonal1','diagonal2','vertical','horizontal']
-    let updatedDistanceLookUp = []
-    for ( let x = 0; x < newX; x++ ) {
-        let updatedDistanceLookUpRow = []
-        for ( let z = 0; z < newZ; z++ ) {
-            let pixelDistanceArray = []
-            for ( let x2 = 0; x2 < newX; x2++ ) {
-                let pixelDistanceArrayRow = []
-                for ( let z2 = 0; z2 < newZ; z2++ ) {
-                    pixelDistanceArrayRow[z2] = Math.hypot( Math.abs( x - x2 ), Math.abs( z - z2 ) ) // pixel
-                }
-                pixelDistanceArray.push( pixelDistanceArrayRow )
-            }
-            updatedDistanceLookUpRow[z] = {}
-            updatedDistanceLookUpRow[z].pixel = pixelDistanceArray
-        }
-        updatedDistanceLookUp.push( updatedDistanceLookUpRow )
-    }
-    return updatedDistanceLookUp
-}
 
 const dim = {
     x:35,
@@ -39,9 +18,8 @@ const initialState = {
     waveHeight: 4,
     waveSpeed: 4,
     bounceSpeed: 2,
-    animCoords: null,
+    animCoords: {x:16, z:-16},
     stopAnim: false,
-    distanceLookUp: calcualteDistanceLookup( dim.x, dim.z ),
     paused: false,
     autoWave: true,
     // colours: colours,
@@ -81,8 +59,7 @@ const ASceneReducer = ( state = initialState, action ) => {
         case actionTypes.SET_DIMENSIONS:
             return {
                 ...state,
-                dimensions: {...action.dimensions},
-                distanceLookUp: calcualteDistanceLookup( action.dimensions.x, action.dimensions.z )
+                dimensions: {...action.dimensions}
             }
         case actionTypes.SET_WAVE_TYPE:
             return {

@@ -7,7 +7,7 @@ const Card = ( props ) => {
     return (
         <a-box
             cursor-listener={`x:${props.x}; z:${props.z}`} clickIdPass={props.click} x={props.x} z={props.z}
-            animate={`distance: ${props.distance}; animIndex:${props.animInd}; paused:${props.paused}`}
+           animate={`distance: ${props.distance}; animIndex:${props.animInd}; animCoords:${props.animCoords.x} ${props.animCoords.z}; position:${props.position}; paused:${props.paused}`}
             material="color: #FFF; roughness: 0.8; metalness: 0.1; opacity: 0"
             position={props.position}
             src="#logo"

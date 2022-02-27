@@ -7,6 +7,7 @@ import {BrowserRouter} from 'react-router-dom'
 import { MuiThemeProvider } from '@material-ui/core/styles'
 import './globalStyles.css'
 import App from './App'
+import 'aframe'
 
 import {createStore, combineReducers} from 'redux'
 import ASceneReducer from './store/reducers/aSceneReducer'

@@ -10,8 +10,7 @@ class CardManager extends Component {
         setTimeout(
             () => {
                 this.props.startColourAnim( 'logo' )
-                this.props.startAnimation( {x: Math.floor( Math.random() * this.props.dimensions.x ), z: Math.floor( Math.random() * this.props.dimensions.z )} )
-            }, 700
+            }, 1200
        )
         this.intervalAnimation = setInterval(
             () => {
@@ -30,25 +29,17 @@ class CardManager extends Component {
 
     }
 
-    comp
-
     render () {
+
         const xIncrement = 1 / this.props.dimensions.x
         const yIncrement = 1 / this.props.dimensions.z
         const xIncrementHalf = xIncrement / 2
         const yIncrementHalf = yIncrement / 2
         let cardEntityArray = []
-        let delay = null
         for ( let z = 0; z < this.props.dimensions.z; z++ ) {
             let row = []
             for ( let x = 0; x < this.props.dimensions.x; x++ ) {
-                if ( this.props.animCoords )
-                    delay = this.props.distanceLookUp[this.props.animCoords.x][this.props.animCoords.z][this.props.waveType][x][z]
-                else {
-                    delay = null
-                }
-
-                row.push( <Card dimensions={this.props.dimensions} lookup={[xIncrement, yIncrement, xIncrementHalf, yIncrementHalf]} height={this.props.cubeHeight} colourInd={this.props.colourIndex} paused={this.props.paused} animInd={this.props.animationIndex} distance={delay} position={`${x} -0 ${-z}`} key={`${x}_${z}`} id={`${x}_${z}`} x={x} z={z} /> )
+                row.push( <Card dimensions={this.props.dimensions} lookup={[xIncrement, yIncrement, xIncrementHalf, yIncrementHalf]} height={this.props.cubeHeight} animCoords={this.props.animCoords} colourInd={this.props.colourIndex} paused={this.props.paused} animInd={this.props.animationIndex} position={`${x} -0 ${-z}`} key={`${x}_${z}`} id={`${x}_${z}`} x={x} z={z} /> )
             }
             cardEntityArray.push( row )
         }

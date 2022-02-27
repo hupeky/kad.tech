@@ -5,7 +5,7 @@ import Camera from '../AScene/Camera/Camera'
 import classes from './AScene.css'
 import RegisterAframeComponents from '../../Containers/RegisterAframeComponents/RegisterAframeComponents'
 import logo512 from "../../assets/imgs/logo512.jpg"
-import 'aframe'
+
 
 const AScene = ( props ) => {
 

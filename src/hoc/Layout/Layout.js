@@ -26,6 +26,8 @@ import List from '@material-ui/core/List'
 import ListItem from '@material-ui/core/ListItem'
 import ListItemIcon from '@material-ui/core/ListItemIcon'
 
+import logo from "../../assets/imgs/kadtech-logo.png"
+
 import IconButton from '@material-ui/core/IconButton'
 import CloseIcon from '@material-ui/icons/Close'
 import DemoIcon from '../../assets/icons/demo'
@@ -103,14 +105,14 @@ class Layout extends Component {
                                     <IconButton style={{color: 'white'}}>
                                         <CloseIcon />
                                     </IconButton>
+
                                 </Toolbar>
                             </AppBar>
                             <List  >
                                 <ListItem onClick={() => this.scrollFromButtonHandler( document.body )} button >
-                                    <ListItemIcon style={{marginRight: '20px'}} color='secondary'>
-                                    <DemoIcon  height={25} />
-                                    </ListItemIcon>
-                                    <Typography variant={'body2'}>Home</Typography>
+
+                                    <img src={logo} style={{height: "50px", width: "auto"}}/>
+
                                 </ListItem>
                                 {this.props.pageBlockData.map( ( pageBlock, i ) => {
                                     if (pageBlock.label) {
@@ -123,7 +125,7 @@ class Layout extends Component {
                                             </ListItem>
                                         )
                                     }
-                     
+
                                 } )}
                             </List>
 
