@@ -114,7 +114,7 @@
       "react-app"
     ]
   },
-  "homepage": "http://kad.tech",
+  "homepage": "https://kad.tech",
   "eslintConfig": {
     "extends": "react-app"
   },

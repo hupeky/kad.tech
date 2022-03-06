@@ -22,10 +22,9 @@ const initialState = {
     stopAnim: false,
     paused: false,
     autoWave: true,
-    // colours: colours,
-    colourIndex: 0,
     colourRef: null,
-    cubeHeight: 0.6
+    cubeHeight: 0.6,
+    loadedTexture: false
 }
 
 
@@ -71,6 +70,12 @@ const ASceneReducer = ( state = initialState, action ) => {
                 ...state,
                 waveShape: action.waveShape
             }
+        case actionTypes.SET_LOADED_TEXTURE:
+            console.log("loaded the texture")
+                return {
+                    ...state,
+                    loadedTexture: true
+                }
         case actionTypes.SET_WAVE_HEIGHT:
             return {
                 ...state,

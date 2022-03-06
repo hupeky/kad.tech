@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {Component} from 'react'
 import CardManager from '../../Containers/CardManager/CardManager'
 import Camera from '../AScene/Camera/Camera'
 
@@ -6,15 +6,18 @@ import classes from './AScene.css'
 import RegisterAframeComponents from '../../Containers/RegisterAframeComponents/RegisterAframeComponents'
 import logo512 from "../../assets/imgs/logo512.jpg"
 
+import {connect} from 'react-redux'
 
-const AScene = ( props ) => {
+import * as actionTypes from '../../store/actions/actions'
 
+class AScene extends Component {
+    render () {
     return (
         <header>
             <section>
-                <a-scene shadow  embedded vr-mode-ui="enabled: false" background="transparent: true" class={classes.embedded}>
-                <a-assets>
-                    <img id="logo" src={logo512} />
+                <a-scene   embedded vr-mode-ui="enabled: false" background="transparent: true" class={classes.embedded}>
+                <a-assets timeout="10000">
+                    <img alt="cubes texture" onLoad={() => this.props.setLoadedTexture(true)} id="logo" src={logo512} />
                 </a-assets>
                 <RegisterAframeComponents />
                     <Camera />
@@ -33,13 +36,27 @@ const AScene = ( props ) => {
                         position="0 10 100" />
                     <a-entity id="center" position="0 -3 0" opacity="0" material="opacity: 0;" geometry="primitive: box; height:0.1; width:0.1; depth:0.1"></a-entity>
                     <a-sky-gradient></a-sky-gradient>
+
+                    {this.props.children}
                     <CardManager/>
-                    {props.children}
                 </a-scene>
             </section>
         </header >
     )
+    }
+}
+
+const mapStateToProps = state => { // map redux state to class props
+    return {
+        cubeHeight: state.aScene.cubeHeight
+    }
 }
 
 
-export default AScene
+const mapDispatchToProps = dispatch => {
+    return {
+        setLoadedTexture: ( loadedTexture ) => dispatch( {type: actionTypes.SET_LOADED_TEXTURE, loadedTexture: loadedTexture} )
+    }
+}
+
+export default connect( mapStateToProps, mapDispatchToProps )( AScene )

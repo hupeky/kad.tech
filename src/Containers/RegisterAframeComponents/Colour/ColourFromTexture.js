@@ -4,12 +4,11 @@ import AFRAME from 'aframe'
 // Linear.easeIn
 class Colour extends Component {
 
-    componentWillMount () {
-        AFRAME.registerComponent( 'colourFromTexture', {
+    componentDidMount () {
+        AFRAME.registerComponent( 'colourfromtexture', {
             schema: {
                 x: {type: 'number', default: 0},
                 z: {type: 'number', default: 0},
-                colourIndex: {type: 'number', default: 0},
                 dimensions: {type: 'vec2', default: {x: 0, y: 0}},
                 lookup: {type: 'array', default: [0,0,0,0]}
             },

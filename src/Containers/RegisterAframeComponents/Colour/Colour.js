@@ -9,7 +9,7 @@ import {Linear} from "../../../assets/gsap/EasePack"
 // Linear.easeIn
 class Colour extends Component {
 
-    componentWillMount () {
+    componentDidMount () {
         let thisClass = this
         AFRAME.registerComponent( 'colour', {
             schema: {

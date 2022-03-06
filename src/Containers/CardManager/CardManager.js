@@ -7,23 +7,15 @@ import * as actionTypes from '../../store/actions/actions'
 
 class CardManager extends Component {
     componentDidMount () {
-        setTimeout(
-            () => {
-                this.props.startColourAnim( 'logo' )
-            }, 1200
-       )
         this.intervalAnimation = setInterval(
             () => {
                 if (!document.hidden) {
                     this.props.setWaveHeight( Math.floor(Math.random() * 10) )
-                          this.props.setWaveSpeed( (Math.floor(Math.random() * 10)  ) +3)
+                    this.props.setWaveSpeed( (Math.floor(Math.random() * 10)  ) +3)
                     this.props.setBounceSpeed( Math.floor(Math.random() * 5 + 1))
 
                     this.props.startAnimation( {x: Math.floor( Math.random() * this.props.dimensions.x ), z: Math.floor( Math.random() * this.props.dimensions.z )} )
-
                 }
-
-
         }
             , 7000)
 
@@ -63,7 +55,8 @@ const mapStateToProps = state => { // map redux state to class props
         distanceLookUp: state.aScene.distanceLookUp,
         paused: state.aScene.paused,
         colourIndex: state.aScene.colourIndex,
-        cubeHeight: state.aScene.cubeHeight
+        cubeHeight: state.aScene.cubeHeight,
+        loadedTexture: state.aScene.loadedTexture
     }
 }
 

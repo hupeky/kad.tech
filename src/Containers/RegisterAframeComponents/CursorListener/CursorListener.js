@@ -6,7 +6,7 @@ import AFRAME from 'aframe'
 import * as actionTypes from '../../../store/actions/actions'
 
 class CursorListener extends Component {
-    componentWillMount () {
+    componentDidMount () {
         let thisClass = this
         AFRAME.registerComponent( 'cursor-listener', {
             schema: {

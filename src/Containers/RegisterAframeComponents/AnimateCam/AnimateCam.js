@@ -3,7 +3,7 @@ import AFRAME from 'aframe'
 
 class AnimateCam extends Component {
 
-    componentWillMount () {
+    componentDidMount () {
         AFRAME.registerComponent( 'animate-cam', {
             schema: {
                 animate: {type: 'boolean', default: false},
